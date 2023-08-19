@@ -15,8 +15,9 @@ def extract():
     for classes in class_names:
         tex = soup.select(f'[class*="{classes}"]')
         for texts in tex:
-            content += texts.get_text(strip=True)
+            content += texts.get_text()
             print(f"{classes}: {content}")
+
     return content
     '''
     for tag in common_tags:
