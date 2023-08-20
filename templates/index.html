@@ -11,7 +11,7 @@
         <button type="submit">Extract Article</button>
         {%if content %} 
         <h2>Extracted content: </h2>
-        <hi>{{content}}</hi>
+        <hi>{{content | safe}}</hi>
         {%endif%}
     </form>
     {% if error %}
